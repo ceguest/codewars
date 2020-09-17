@@ -11,4 +11,11 @@ describe "order" do
             end
         end
     end
+
+    context "given a string with two unordered words" do
+        it "returns the words in the correct position" do
+            expect(order("W2orld He1llo")).to eq("He1llo W2orld")
+        end
+    end
+
 end
