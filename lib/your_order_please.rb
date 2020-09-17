@@ -5,7 +5,7 @@ def order(words)
     if word_array.length == 1
       return words
     end
-    return "He1llo W2orld"
+    return "#{word_array[1]} #{word_array[0]}"
 end
 
 
