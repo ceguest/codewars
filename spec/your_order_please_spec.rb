@@ -12,9 +12,13 @@ describe "order" do
         end
     end
 
-    context "given a string with two unordered words" do
-        it "returns the words in the correct position" do
-            expect(order("W2orld He1llo")).to eq("He1llo W2orld")
+    unordered_two_word_inputs = [["W2orld He1llo", "He1llo W2orld"],
+                                 ["Wars2 1Code", "1Code Wars2"]]
+    unordered_two_word_inputs.each do |input, output|
+        context "given a string with two unordered words" do
+            it "returns the words in the correct position" do
+                expect(order(input)).to eq(output)
+            end
         end
     end
 
