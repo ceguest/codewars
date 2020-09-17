@@ -35,5 +35,16 @@ describe "order" do
             end
         end
     end
+
+
+    many_word_inputs = [["is2 Thi1s T4est 3a", "Thi1s is2 3a T4est"],
+                        ["4of Fo1r pe6ople g3ood th5e the2", "Fo1r the2 g3ood 4of th5e pe6ople"]]
+    many_word_inputs.each do |input, output|
+        context "given a string with many words" do
+            it "returns the words in the correct ordered position" do
+                expect(order(input)).to eq(output)
+            end
+        end
+    end
 end
 

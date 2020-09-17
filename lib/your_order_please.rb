@@ -1,14 +1,15 @@
 
-
 def order(words)
     word_array = words.split
     if word_array.length <= 1
       return words
     end
 
-    first_word = word_array.select { |word| /1/.match(word)}[0]
-    second_word = word_array.select { |word| /2/.match(word)}[0]
-    return "#{first_word} #{second_word}"
+    ordered_words = ""
+    (1..word_array.length).each do |position|
+        ordered_words << word_array.select { |word| /#{position}/.match(word)}[0]
+        ordered_words << " "
+    end
+
+    return ordered_words.strip
 end
-
-
