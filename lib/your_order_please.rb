@@ -2,9 +2,9 @@
 
 def order(words)
     word_array = words.split
-    if word_array.length == 1
+    if word_array.length <= 1
       return words
-    end
+    end   
     return "#{word_array[1]} #{word_array[0]}"
 end
 
