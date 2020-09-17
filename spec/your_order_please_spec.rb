@@ -26,5 +26,14 @@ describe "order" do
         end
     end
 
+    ordered_two_word_inputs = [["He1llo W2orld", "He1llo W2orld"],
+                            ["1Code Wars2", "1Code Wars2"]]
+    ordered_two_word_inputs.each do |input, output|
+        context "given a string with two ordered words" do
+            it "returns the words in the correct position" do
+                expect(order(input)).to eq(output)
+            end
+        end
+    end
 end
 
